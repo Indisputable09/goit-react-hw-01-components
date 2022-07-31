@@ -4,17 +4,17 @@ import { List, Status, ListItem, Section, DescriptionText, Img } from './FriendL
 export const FriendList = ({ friends }) => {
     return (
         <Section>
-    <List>
-    {friends.map(({avatar, name, isOnline, id}) => (
-    <ListItem key={id}>
-    <Status isOnline={isOnline}></Status>
-    <Img src={avatar} alt="User avatar" width="48" />
-    <DescriptionText>{name}</DescriptionText>
-</ListItem>
-        ))}
-</List>
-</Section>
-)
+            <List>
+                {friends.map(({ avatar, name, isOnline, id }) => (
+                    <ListItem key={id}>
+                        <Status isOnline={isOnline}></Status>
+                        <Img src={avatar} alt="User avatar" width="48" />
+                        <DescriptionText>{name}</DescriptionText>
+                    </ListItem>
+                ))}
+            </List>
+        </Section>
+    )
 }
 
 FriendList.propTypes = {
